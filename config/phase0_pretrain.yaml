@@ -1,0 +1,24 @@
+Exp_name: phase0_pretrain
+
+Modality: 'audio'
+Dataset:
+    base_path: './data/audio_dataset/'       # see README for the dataset link
+    opleg_base_path: './data/audio_dataset_phase6/'  # only needed if max_epoch pretraining ever touches Phase 6; unused here
+Training:
+    Batch_size: 1024
+    seed: 25
+    classes_num: 3
+    max_epoch: 100
+    lr: 0.0001
+    pretrained_cnn10_ckpt: './pretrained/Cnn10_mAP=0.380.pth'  # official PANNs checkpoint; omit/null to train from scratch
+Audio_features:
+    sample_rate: 64000
+    window_size: 2048
+    hop_size: 1024
+    mel_bins: 64
+    fmin: 1
+    fmax: 128000
+
+Model: PANNS_Cnn10  # or Cnn14_mobilev2
+
+Workspace: 'workspace'

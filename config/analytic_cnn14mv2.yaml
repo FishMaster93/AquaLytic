@@ -1,0 +1,25 @@
+Exp_name: AquaLytic_Cnn14MobileV2
+
+Modality: 'audio'
+Dataset:
+    base_path: './data/audio_dataset/'
+    opleg_base_path: './data/audio_dataset_phase6/'
+Training:
+    Batch_size: 1024
+    seed: 25
+    classes_num: 3
+    phase0_ckpt: 'workspace/phase0_pretrain_cnn14mv2/save_models/phase0_best.pt'
+    ridge_lambda: 1.0
+    random_proj_dim: 8192   # same width as the Cnn10 config, for a matched comparison
+
+Audio_features:
+    sample_rate: 64000
+    window_size: 2048
+    hop_size: 1024
+    mel_bins: 64
+    fmin: 1
+    fmax: 128000
+
+Model: Cnn14_mobilev2
+
+Workspace: 'workspace'

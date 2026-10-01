@@ -1,0 +1,26 @@
+Exp_name: AquaLytic_Cnn10
+
+Modality: 'audio'
+Dataset:
+    base_path: './data/audio_dataset/'
+    opleg_base_path: './data/audio_dataset_phase6/'
+Training:
+    Batch_size: 1024
+    seed: 25
+    classes_num: 3
+    phase0_ckpt: 'workspace/phase0_pretrain/save_models/phase0_best.pt'
+    ridge_lambda: 1.0       # ridge regularization; validated robust across 0.1-100
+    random_proj_dim: 8192   # frozen random-projection buffer width; None disables it
+    use_whitening: false    # ablated: worse than plain random projection, off by default
+    coupling_mu: 0.0        # ordinal threshold-coupling regularizer; ablated, no net benefit
+Audio_features:
+    sample_rate: 64000
+    window_size: 2048
+    hop_size: 1024
+    mel_bins: 64
+    fmin: 1
+    fmax: 128000
+
+Model: PANNS_Cnn10
+
+Workspace: 'workspace'
