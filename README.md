@@ -1,5 +1,13 @@
 # AquaLytic
 
+**AquaLytic: closed-form species-incremental learning for acoustic fish
+feeding intensity recognition in aquaculture**
+
+Ying Xiao, Tan Wang, Liang Wang, Tomas Norton, Meng Cui&dagger;
+(&dagger; corresponding author)
+
+*Information Processing in Agriculture*
+
 Exemplar-free Analytic Class-Incremental Learning for fish feeding-intensity
 classification from acoustic data.
 
@@ -127,16 +135,16 @@ precision/F1 at that fixed threshold, phase by phase.
 If you use this code, please cite:
 
 ```bibtex
-@article{aqualytic2026,
-  title   = {AquaLytic: Exemplar-Free Analytic Class-Incremental Learning for
-             Fish Feeding-Intensity Recognition from Acoustic Data},
-  author  = {TODO},
-  journal = {TODO},
+@article{xiao2026aqualytic,
+  title   = {AquaLytic: closed-form species-incremental learning for acoustic
+             fish feeding intensity recognition in aquaculture},
+  author  = {Xiao, Ying and Wang, Tan and Wang, Liang and Norton, Tomas and Cui, Meng},
+  journal = {Information Processing in Agriculture},
   year    = {2026}
 }
 ```
 
-(Fill in once the paper's venue/author list is finalized.)
+(Update with volume/pages/DOI once the paper is published.)
 
 ## License
 
