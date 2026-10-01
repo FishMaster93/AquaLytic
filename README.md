@@ -8,9 +8,6 @@ Ying Xiao, Tan Wang, Liang Wang, Tomas Norton, Meng Cui&dagger;
 
 *Information Processing in Agriculture*
 
-Exemplar-free Analytic Class-Incremental Learning for fish feeding-intensity
-classification from acoustic data.
-
 A frozen AudioSet-pretrained (or from-scratch) CNN backbone feeds a fixed,
 high-dimensional random-projection buffer, on top of which a CORAL ordinal
 head is updated with a **closed-form ridge-regression solve** every time a
